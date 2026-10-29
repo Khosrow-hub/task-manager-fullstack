@@ -1,31 +1,44 @@
-﻿# Task API
+# Task Manager — Fullstack
 
-REST API for managing tasks with JWT authentication.
-- **Base URL:** `https://task-api-sifa.onrender.com`
+A MERN task manager with JWT auth, full CRUD, search, and filtering.
 
-## Stack
-- Node.js + Express
-- MongoDB + Mongoose
-- JWT auth, express-validator
+- **Frontend:** React + Vite + Tailwind CSS (deployed on Vercel)
+- **Backend:** Node.js + Express + MongoDB + JWT (deployed on Render)
 
-## Setup
+## Live URLs
+- Frontend: _add after deploy_
+- Backend API: https://task-api-sifa.onrender.com
 
-1. Clone the repo
-2. `npm install`
-3. Copy `.env.example` to `.env` and fill in real values
-4. Make sure MongoDB is running locally
-5. `npm run dev`
+## Features
+- User registration & login (JWT)
+- Create / edit / delete / complete tasks
+- Search by title & description
+- Filter: All / Active / Done
+- Loading states & inline error handling
+- Fully responsive
 
-## Endpoints
+## Repo structure
+- `/backend` — Express API (see backend/README.md)
+- `/frontend` — React app
 
-### Auth
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-- `GET  /api/auth/me` (protected)
+## Local development
 
-### Tasks (all protected)
-- `GET    /api/tasks`
-- `POST   /api/tasks`
-- `GET    /api/tasks/:id`
-- `PUT    /api/tasks/:id`
-- `DELETE /api/tasks/:id`
+### Backend
+\`\`\`bash
+cd backend
+npm install
+cp .env.example .env   # fill in MONGO_URI, JWT_SECRET
+npm run dev
+\`\`\`
+
+### Frontend
+\`\`\`bash
+cd frontend
+npm install
+cp .env.example .env   # VITE_API_URL=http://localhost:5000
+npm run dev
+\`\`\`
+
+## Deployment
+- Backend → Render (Web Service, root = `backend`, build `npm install`, start `npm start`)
+- Frontend → Vercel (root = `frontend`, framework = Vite, env `VITE_API_URL` = deployed backend URL)
