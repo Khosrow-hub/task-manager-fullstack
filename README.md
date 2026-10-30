@@ -6,7 +6,7 @@ A MERN task manager with JWT auth, full CRUD, search, and filtering.
 - **Backend:** Node.js + Express + MongoDB + JWT (deployed on Render)
 
 ## Live URLs
-- Frontend: https://your-vercel-url.vercel.app
+- Frontend: https://task-manager-fullstack-beta-three.vercel.app/login
 - Backend API: https://task-api-sifa.onrender.com
 
 ## Features
